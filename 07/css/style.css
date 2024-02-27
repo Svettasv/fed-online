@@ -44,11 +44,11 @@ form {
 }
 
 .menu-search {
+  width: 316px;
+  padding: 15px;
   border: 0;
   background-color: #efefef;
   border-radius: 12px;
-  padding: 15px;
-  width: 316px;
 }
 
 .menu-search:focus {
@@ -66,19 +66,17 @@ form {
 
 .menu-list {
   list-style: none;
-  font-size: 0;
   margin-bottom: 32px;
 }
 
 .menu-list__item {
   display: inline-block;
   margin-right: 24px;
+  text-align: center;
 }
 
 .list-item__image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  line-height: 74px;
   width: 74px;
   height: 74px;
   background-color: #efefef;
@@ -86,22 +84,15 @@ form {
   margin-bottom: 8px;
 }
 
+.list-item__image img {
+  vertical-align: middle;
+}
+
 .list-item__name {
   font-size: 16px;
   font-weight: 500;
   color: #c4c4c4;
-  text-align: center;
 }
-
-/* menu list item active state */
-
-/* .active .list-item__image {
-  background-color: #eae2b7;
-}
-
-.active .list-item__name {
-  color: #000;
-} */
 
 /* menu list item hover state */
 
@@ -121,7 +112,7 @@ form {
   display: none;
 }
 .menu-list__item:hover .hover-image {
-  display: block;
+  display: inline-block;
 }
 
 /* menu items */
@@ -139,12 +130,10 @@ form {
 
 .menu-item__card {
   width: 316px;
-  height: 88px;
+
   border-radius: 12px;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
   padding: 10px;
-  display: flex;
-  align-items: center;
   margin-bottom: 12px;
 }
 
@@ -155,10 +144,14 @@ form {
 .item-card__image {
   width: 70px;
   text-align: center;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .item-card__text {
   margin-left: 12px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .item-card__name {
