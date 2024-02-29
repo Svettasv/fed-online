@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=IBM+Plex+Sans:wght@400;600&display=swap");
+
+body {
+  background-color: rgba(0, 161, 198, 0.05);
+}
+
+.container {
+  width: 1240px;
+  margin: 0 auto;
+  padding-top: 142px;
+  padding-bottom: 128px;
+}
+
+/* title */
+
+.title {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 48px;
+  line-height: 80px;
+  text-transform: capitalize;
+}
+
+.title-bold {
+  font-weight: 700;
+}
+
+/* description */
+
+.description {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+  max-width: 695px;
+  margin-bottom: 50px;
+}
+
+/* cards container */
+
+.clearfix {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* cards items*/
+
+.cards-item {
+  width: 295px;
+  height: 470px;
+  padding-top: 56px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(234, 237, 242);
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(45, 54, 64, 0.05);
+  float: left;
+  margin-right: 20px;
+}
+
+.cards-item:last-child {
+  margin-right: 0;
+}
+
+/* cards images */
+
+.item-image__container {
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 100%;
+  margin: 0 auto;
+  margin-bottom: 34px;
+  border: 2px solid rgb(239, 243, 248);
+}
+
+.item-image {
+  width: 100%;
+  height: auto;
+}
+/* cards text */
+
+.text-name {
+  color: rgb(45, 54, 64);
+  font-family: "Catamaran", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 33px;
+  text-align: center;
+}
+
+.text-occupation {
+  color: rgb(75, 79, 82);
+  font-family: "Catamaran", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+  margin-bottom: 33px;
+}
+
+/* cards technologies images */
+
+.item-tech-image__container {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 100%;
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.item-tech-image__container:last-child {
+  margin-right: 0;
+}
+
+.tech-image {
+  width: 100%;
+  height: auto;
+}
+
+.tech-images {
+  text-align: center;
+}
