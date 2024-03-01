@@ -81,23 +81,24 @@ body {
 }
 /* cards text */
 
+.item-text {
+  margin-bottom: 33px;
+  font-family: "Catamaran", sans-serif;
+  text-align: center;
+}
+
 .text-name {
   color: rgb(45, 54, 64);
-  font-family: "Catamaran", sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 33px;
-  text-align: center;
 }
 
 .text-occupation {
   color: rgb(75, 79, 82);
-  font-family: "Catamaran", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;
-  text-align: center;
-  margin-bottom: 33px;
 }
 
 /* cards technologies images */
