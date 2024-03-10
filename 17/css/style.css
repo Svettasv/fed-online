@@ -427,10 +427,10 @@ header {
 
 /* FOOTER */
 footer {
-  min-width: 100vh;
   padding: 60px 0;
   background-color: #000;
   color: #fff;
+  min-width: 360px;
 }
 
 .footer-container {
@@ -440,6 +440,7 @@ footer {
   margin-bottom: 78px;
   display: flex;
   justify-content: space-between;
+  border: 2px solid white;
 }
 
 .footer-menu-one,
