@@ -427,6 +427,7 @@ header {
 
 /* FOOTER */
 footer {
+  min-width: 100vh;
   padding: 60px 0;
   background-color: #000;
   color: #fff;
