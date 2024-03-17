@@ -252,8 +252,8 @@ main .main-link .countries .fa-chevron-right {
     color: #fff;
     margin-left: 0;
   }
-  .title,
-.description {
+  main .title,
+main .description {
     padding-right: 5%;
   }
   .main-container {
