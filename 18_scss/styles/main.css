@@ -216,7 +216,7 @@ main .main-link .countries .fa-chevron-right {
 .search-items {
     flex-direction: column;
   }
-  .item {
+  .search-destination .search-items .item {
     margin-right: 0;
     flex-basis: 65px;
   }
@@ -248,9 +248,8 @@ main .main-link .countries .fa-chevron-right {
     font-size: 1.5rem;
     padding: 1.1rem 0;
   }
-  a.menu-list-button {
+  header .header-container .menu-list a.menu-list-button {
     color: #fff;
-    padding: 1.1rem 1.625rem;
     margin-left: 0;
   }
   .title,

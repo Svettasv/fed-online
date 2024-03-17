@@ -266,7 +266,7 @@ main {
     flex-direction: column;
   }
 
-  .item {
+  .search-destination .search-items .item {
     margin-right: 0;
     flex-basis: 65px;
   }
@@ -305,10 +305,8 @@ main {
     padding: 1.1rem 0;
   }
 
-  a.menu-list-button {
+  header .header-container .menu-list a.menu-list-button {
     color: #fff;
-
-    padding: 1.1rem 1.625rem;
     margin-left: 0;
   }
 
