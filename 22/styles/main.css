@@ -360,3 +360,50 @@ button {
 .explore1:hover::after {
   opacity: 100%;
 }
+
+.explore2 {
+  position: relative;
+  color: #ffffff;
+  border: none;
+}
+
+.explore2::after,
+.explore2::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  transition: all 0.5s ease-out;
+  z-index: -2;
+}
+
+.explore2::before {
+  background-color: #0f89fa; /* Assuming $colorLeft is defined */
+  top: 0;
+  left: 0;
+}
+
+.explore2::after {
+  background-color: #51b851; /* Assuming $colorRight is defined */
+  top: 0;
+  right: 0;
+}
+
+.explore2:hover::before,
+.explore2:hover::after {
+  width: 86px;
+  height: 41px;
+}
+
+.explore2:hover::after {
+  left: 0;
+  right: initial;
+  z-index: -10;
+}
+
+.explore2:hover::before {
+  right: 0;
+  left: initial;
+  top: initial;
+  bottom: 0;
+}
