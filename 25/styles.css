@@ -1,0 +1,314 @@
+/* Fonts */
+
+:root {
+  --color1: #668e68;
+  --color2: #ffffff;
+  --color3: #000000;
+  --color4: #81613b;
+}
+
+@import url("fonts/georgia/style.css");
+@import url("fonts/yugothic/style2.css");
+
+body {
+  min-width: 280px;
+}
+
+nav {
+  background-color: var(--color1);
+}
+
+nav .nav-link,
+.navbar-brand {
+  color: var(--color2);
+  font-family: "YuGothic";
+  font-size: 18px;
+}
+
+.navbar-nav {
+  gap: 30px;
+}
+
+.navbar-nav .nav-link.active {
+  color: var(--color2);
+}
+
+nav .navbar-nav {
+  margin-left: auto;
+}
+
+.navbar-brand {
+  font-family: "Georgia";
+  font-size: 44px;
+}
+
+.navbar-toggler-icon {
+  background-image: url(images/toggler.svg);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  background-image: url(images/close.svg);
+}
+
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+.flex-list {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  gap: 50px;
+}
+
+.flex-list a {
+  color: var(--color2);
+}
+
+.site-title {
+  padding: 170px 0;
+  background-image: url(images/title-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.site-title h1 {
+  font-family: "Shadows Into Light", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--color2);
+  font-size: 110px;
+}
+
+.menu {
+  padding: 60px;
+}
+
+.menu-items {
+  margin-bottom: 40px;
+}
+
+.menu h2,
+.about h2,
+.news h2 {
+  font-family: "Shadows Into Light", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--color3);
+  font-size: 40px;
+}
+
+.menu p {
+  font-size: 20px;
+}
+
+.img-container {
+  max-width: 350px;
+  max-height: 350px;
+  overflow: hidden;
+  border: 9px solid var(--color4);
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+}
+
+.img-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.img-text {
+  width: 100%;
+  background-color: rgba(252, 252, 252, 0.78);
+  position: absolute;
+  top: 75%;
+  padding-bottom: 38px;
+}
+
+.img-text p {
+  font-family: "Georgia";
+  font-size: 26px;
+  text-align: center;
+  color: var(--color3);
+  padding-top: 15px;
+}
+
+.img-flex {
+  display: flex;
+  justify-content: center;
+}
+
+.menu-btn {
+  padding: 7px 35px;
+  background-color: var(--color1);
+  color: var(--color2);
+  border-radius: 30px;
+  position: relative;
+}
+
+.menu-btn i {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.menu-btn:hover {
+  background-color: #527253;
+  color: var(--color2);
+}
+
+.about {
+  padding: 140px 150px;
+  background-image: url(images/about-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.about h2 {
+  margin-bottom: 0;
+  color: var(--color2);
+}
+
+.about p,
+.about__description {
+  font-family: "YuGothic";
+  color: var(--color2);
+  font-size: 20px;
+}
+
+.about__description {
+  max-width: 370px;
+  margin: 0 auto 60px;
+}
+
+.news {
+  padding: 80px 0;
+  background-color: rgba(129, 97, 59, 0.2);
+}
+
+.news p {
+  font-family: "YuGothic";
+  color: var(--color3);
+  font-size: 20px;
+}
+
+.news-box {
+  padding: 20px;
+  background-color: var(--color2);
+  border: 1px solid var(--color1);
+}
+
+.news .news-box p {
+  font-size: 18px;
+}
+
+.news-box p:last-child {
+  margin-bottom: 0;
+}
+
+footer {
+  padding: 20px 0 85px;
+  background-color: var(--color3);
+  position: relative;
+}
+footer p {
+  font-family: "YuGothic";
+  color: var(--color2);
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.footer__copyright {
+  text-align: right;
+  font-family: "Georgia";
+}
+
+.btn-top {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  border-radius: 50%;
+  background-color: var(--color1);
+  color: var(--color2);
+  bottom: 20px;
+  right: 20px;
+}
+
+@media (max-width: 992px) {
+  .img-text p {
+    padding-top: 10px;
+  }
+
+  .navbar-nav {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .img-text p {
+    padding-top: 15px;
+  }
+
+  .site-title {
+    padding: 150px 0;
+  }
+
+  .site-title h1 {
+    font-size: 80px;
+  }
+
+  .menu .row .img-flex {
+    margin-top: 30px;
+  }
+
+  .img-text {
+    top: 70%;
+  }
+}
+
+@media (max-width: 576px) {
+  .img-text p {
+    padding-top: 15px;
+    font-size: 26px;
+  }
+  .site-title {
+    padding: 140px 0;
+  }
+
+  .site-title h1 {
+    font-size: 50px;
+  }
+
+  .img-container {
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+  .menu .row .img-flex {
+    margin-top: 20px;
+  }
+
+  .about {
+    padding: 30px 15px;
+  }
+
+  .news {
+    padding: 50px 0;
+  }
+}
+
+@media (max-width: 300px) {
+  .img-text {
+    top: 60%;
+  }
+
+  .img-text p {
+    font-size: 20px;
+  }
+}
