@@ -37,7 +37,7 @@ let userAge = +prompt("What is your age?");
 
 let checkAge = userAge >= 18;
 
-alert(`If you are allowed to use our services - ${checkAge}`);
+alert(`You are allowed to use our services - ${checkAge}`);
 
 // 4. Розрахунок вартості товару та console.log:
 
