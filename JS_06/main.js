@@ -14,7 +14,7 @@ function subtractTwoNumbers(a, b) {
 
 function divideTwoNumbers(a, b) {
   if (b === 0) {
-    return;
+    return "Ділити на 0 не можна";
   } else {
     return a / b;
   }
@@ -38,9 +38,6 @@ let calculator = function (operation, numberOne, numberTwo) {
 
     case "/":
       result = divideTwoNumbers(numberOne, numberTwo);
-      if (result === undefined) {
-        result = "Ділити на 0 не можна";
-      }
       break;
 
     case "*":
