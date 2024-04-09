@@ -51,10 +51,7 @@ window.onload = function () {
 
   for (let i = 0; i < 50; i++) {
     let flexBlockItem = document.createElement("div");
-    flexBlockItem.setAttribute(
-      "style",
-      "width: 50px; height: 50px; border-radius: 10px;"
-    );
+    flexBlockItem.setAttribute("style", "width: 50px; height: 50px;");
 
     flexBlockItem.classList.add("circle-elemt"); //6. Додайте всім стврореним 50 div елементам класс circle-elemt
     flexBlockItem.style.backgroundColor = generateRandomColor();
