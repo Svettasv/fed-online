@@ -5,7 +5,7 @@ window.onload = function () {
   console.log(firstLevelElements.length);
 
   //-виведіть в консоль кількість елементів 2 рівня вкладення.
-  let secondLevelElements = document.querySelectorAll("#tree > li > ul > li");
+  let secondLevelElements = document.querySelectorAll("#tree > li > ul");
   console.log(secondLevelElements.length);
 
   //2. Пройдіть по масиву і зробіть заповнення таблиці даними з масива
