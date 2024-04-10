@@ -35,26 +35,30 @@ window.onload = function () {
 
   // 5. Створіть блок за допомогою js задайте блоку стиль display flex та в середині цього блоку створіть 50 div блоків з правилом border-radius, width 50px height 50px та background-color
 
-  let flexBlock = document.createElement("div");
-  bodyEl.appendChild(flexBlock);
-  flexBlock.setAttribute("style", "display:flex; flex-wrap: wrap; gap: 20px;");
-
   function generateRandomColor() {
     let red = Math.floor(Math.random() * 256);
     let green = Math.floor(Math.random() * 256);
     let blue = Math.floor(Math.random() * 256);
-
     let color = `rgb(${red}, ${green}, ${blue})`;
-
     return color;
   } //Додаткове завдання: спробуйте зробити  завдання 5 так щоб в кожного div елемента був унікальний бекграунд
 
-  for (let i = 0; i < 50; i++) {
-    let flexBlockItem = document.createElement("div");
-    flexBlockItem.setAttribute("style", "width: 50px; height: 50px;");
+  function createDiv() {
+    let divBlock = document.createElement("div");
+    divBlock.style.display = "flex";
+    divBlock.style.flexWrap = "wrap";
+    divBlock.style.gap = "20px";
+    bodyEl.appendChild(divBlock);
 
-    flexBlockItem.classList.add("circle-elemt"); //6. Додайте всім стврореним 50 div елементам класс circle-elemt
-    flexBlockItem.style.backgroundColor = generateRandomColor();
-    flexBlock.appendChild(flexBlockItem);
+    for (let i = 0; i < 50; i++) {
+      let blockItem = document.createElement("div");
+      blockItem.style.width = "50px";
+      blockItem.style.height = "50px";
+      blockItem.style.backgroundColor = generateRandomColor();
+      blockItem.classList.add("circle-elemt"); //6. Додайте всім стврореним 50 div елементам класс circle-elemt
+      divBlock.appendChild(blockItem);
+    }
   }
+
+  createDiv();
 };
