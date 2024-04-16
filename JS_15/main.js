@@ -94,4 +94,27 @@ window.onload = function () {
     let innerText = e.target.innerText;
     alert(`${innerText} is clicked!`);
   };
+
+  //Extra menu buton
+
+  let menuBtn = document.querySelector(".menu-btn");
+  let menuList = document.querySelector(".menu");
+  let closeInfo = document.querySelector(".close-info");
+  let openInfo = document.querySelector(".open-info");
+  openInfo.style.display = "block";
+  closeInfo.style.display = "none";
+  menuList.style.display = "none";
+
+  menuBtn.onclick = function () {
+    this.classList.toggle("active");
+    if (this.classList.contains("active")) {
+      menuList.style.display = "block";
+      closeInfo.style.display = "block";
+      openInfo.style.display = "none";
+    } else {
+      menuList.style.display = "none";
+      closeInfo.style.display = "none";
+      openInfo.style.display = "block";
+    }
+  };
 };
