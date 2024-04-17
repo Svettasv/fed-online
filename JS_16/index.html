@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js"></script>
+    <style>
+        body {
+            padding-bottom: 800px;
+        }
+
+        .block {
+            width: 500px;
+            height: 250px;
+            background-color: red;
+            margin: 20px auto;
+            box-sizing: border-box;
+        }
+
+
+
+        .userContextMenu {
+            position: absolute;
+            width: 150px;
+            list-style: none;
+            padding-left: 0;
+            background-color: #eee;
+            display: none;
+            border: 1px solid black;
+
+        }
+
+        .userContextMenu__item {
+            padding: 10px;
+        }
+
+        .userContextMenu__item:hover {
+            background-color: #fff;
+        }
+
+
+        img {
+            display: block;
+            margin: 30px auto;
+        }
+
+        .game-field {
+            width: 600px;
+            height: 400px;
+            background-color: grey;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .game-block {
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>Завдання 1</p>
+
+    <div class="block">
+
+    </div>
+
+    <p>Завдання 2</p>
+
+    <div class="block block2">
+
+        <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+        <ul class="userContextMenu">
+            <li class="userContextMenu__item right">вирівняти по правому краю</li>
+            <li class="userContextMenu__item left">вирівняти по лівому краю</li>
+            <li class="userContextMenu__item center">вирівняти по центру</li>
+            <li class="userContextMenu__item hide">приховати елемент</li>
+        </ul>
+
+
+    </div>
+
+    <p>Завдання 3</p>
+    <img src="https://picsum.photos/200/300" alt="">
+
+    <p>Завдання 4</p>
+
+    <div class="game-field">
+        <div class="game-block"></div>
+
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>
