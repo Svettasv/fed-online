@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .taskList {
+            max-width: 150px;
+        }
+
+        .hasDelete {
+            position: relative;
+
+        }
+
+        .hasDelete::after {
+            content: "X";
+            color: red;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        .hasDelete:hover::after {
+            cursor: pointer;
+        }
+    </style>
+    <script src="main.js"></script>
+
+</head>
+
+<body>
+    <h2>Завдання 1: Конвертер валют</h2>
+
+
+    <form action="">
+        <h3>Конвертер</h3>
+        <label for="currencyAmount">Введіть суму у гривні</label>
+        <input id="currencyAmount" class="currencyAmount" type="text" name="currencyAmount">
+        <br>
+        <br>
+        <label for="currencyRate">Введіть поточний курс долара</label>
+        <input id="currencyRate" class="currencyRate" type="text" name="currencyRate">
+        <button class="exchange">Конвертувати</button>
+        <p class="result">Сума у доларах: <span class="resultValue">0</span></p>
+    </form>
+
+    <h2>Завдання 2: Динамічний список задач</h2>
+
+    <input class="inputTask" type="text" name="" id="">
+    <button class="addTask">Додати до списку</button>
+    <ul class="taskList">Список задач</ul>
+
+
+</body>
+
+</html>
