@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .reset,
+        .reset2 {
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        .list {
+            margin: 20px 0;
+        }
+
+        .order {
+            margin: 20px 0;
+        }
+    </style>
+    <script src="main.js"></script>
+
+</head>
+
+<body>
+    <h2>Завдання 1: Форма з вибором улюбленого кольору:</h2>
+    <form action="">
+        <p>Оберіть колір сторінки</p>
+        <div>
+            <input type="radio" value="pink" name="color" id="pink">
+            <label for="pink">Рожевий</label>
+        </div>
+        <div>
+            <input type="radio" value="yellow" name="color" id="yellow">
+            <label for="yellow">Жовтий</label>
+        </div>
+        <div>
+            <input type="radio" value="lightgreen" name="color" id="lightgreen">
+            <label for="lightgreen">Салатовий</label>
+        </div>
+        <button class="reset">Скинути</button>
+    </form>
+    <h2>Завдання 2: Форма для вибору хобі з чекбоксами:</h2>
+
+    <form class="hobbies" action="">
+        <p>Оберіть свої хобі</p>
+        <div>
+            <input type="checkbox" value="Фотографування" name="hobby" id="photography">
+            <label for="photography">Фотографування</label>
+        </div>
+        <div>
+            <input type="checkbox" value="Читання" name="hobby" id="reading">
+            <label for="reading">Читання</label>
+        </div>
+        <div>
+            <input type="checkbox" value="Спорт" name="hobby" id="sport">
+            <label for="sport">Спорт</label>
+        </div>
+        <div>
+            <input type="checkbox" value="Музика" name="hobby" id="music">
+            <label for="music">Музика</label>
+        </div>
+        <div class="list">Мої хобі:</div>
+        <div class="hobbyList">
+
+        </div>
+        <button class="reset2">Скинути</button>
+    </form>
+
+    <h2>Завдання 3: Форма з вибором країни із випадаючого списку:</h2>
+
+    <form action="" class="countries">
+        <label for="countriesList">Обери країну:</label>
+        <select id="countriesList">
+
+            <option value="Україна">Україна</option>
+            <option value="Туреччина">Туреччина</option>
+            <option value="Іспанія">Іспанія</option>
+            <option value="Португалія">Португалія</option>
+            <option value="Франція">Франція</option>
+        </select>
+        <p>Столиця: <span class="countryCapital"></span></p>
+        <p>Населення: <span class="countryPopulation"></span></p>
+    </form>
+
+    <h2>Завдання 4: Форма для оцінювання якості обслуговування:</h2>
+
+    <p>Оцініть якість обслуговування</p>
+
+    <form action="" class="rating">
+        <div>
+            <label for="1">Оцінка: 1</label>
+            <input type="radio" name="serviceRating" id="1" value="1">
+        </div>
+        <div>
+            <label for="2">Оцінка: 2</label>
+            <input type="radio" name="serviceRating" id="2" value="2">
+        </div>
+        <div>
+            <label for="3">Оцінка: 3</label>
+            <input type="radio" name="serviceRating" id="3" value="3">
+        </div>
+        <div>
+            <label for="4">Оцінка: 4</label>
+            <input type="radio" name="serviceRating" id="4" value="4">
+        </div>
+        <div>
+            <label for="5">Оцінка: 5</label>
+            <input type="radio" name="serviceRating" id="5" value="5">
+        </div>
+
+    </form>
+
+    <h2>Додаткове завдання: Піцца паті</h2>
+
+    <p>Замов свою найсмачнішу піцу!</p>
+
+    <form action="" class="pizzaOrder">
+
+        <label for="pizzaName">Назва піци</label>
+
+        <select name="" id="pizzaName">
+            <option value="Маргарита">Маргарита</option>
+            <option value="Мисливська">Мисливська</option>
+            <option value="Сирна">Сирна</option>
+        </select>
+
+
+        <p>Розмір</p>
+        <div>
+            <label for="s">На одного</label>
+            <input type="radio" name="pizzaSize" id="s" value="S">
+        </div>
+        <div>
+            <label for="m">На двох</label>
+            <input type="radio" name="pizzaSize" id="m" value="M">
+        </div>
+        <div>
+            <label for="l">На компанію</label>
+            <input type="radio" name="pizzaSize" id="l" value="L">
+        </div>
+
+        <p>Додаткова начинка</p>
+        <div>
+            <input type="checkbox" value="Ковбаски" name="extra" id="sausages">
+            <label for="sausages">Ковбаски</label>
+        </div>
+        <div>
+            <input type="checkbox" value="Камамбер" name="extra" id="cheese">
+            <label for="cheese">Камамбер</label>
+        </div>
+        <div>
+            <input type="checkbox" value="Гриби" name="extra" id="mushrooms">
+            <label for="mushrooms">Гриби</label>
+        </div>
+
+        <button class="order">Замовити</button>
+        <button class="reset3">Скинути</button>
+
+
+
+
+
+
+    </form>
+
+
+
+
+
+</body>
+
+</html>
