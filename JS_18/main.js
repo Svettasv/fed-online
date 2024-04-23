@@ -209,9 +209,6 @@ window.onload = function () {
         size = radiobutton.value;
         price += 100;
       }
-      // else {
-      //   size = radiobutton.value;
-      // }
     }
     for (checkbox of pizzaCheckboxes) {
       if (checkbox.checked) {
@@ -234,15 +231,15 @@ window.onload = function () {
     );
   });
 
-  // let resetButton3 = document.querySelector(".reset3");
-  // resetButton2.addEventListener("click", (e) => {
-  //   e.preventDefault();
-  //   pizzaNames.selectedIndex = -1;
-  //   pizzaRadioBtns.forEach(function (radioButton) {
-  //     radioButton.checked = false;
-  //   });
-  //   pizzaCheckboxes.forEach(function (checkbox) {
-  //     checkbox.checked = false;
-  //   });
-  // });
+  let resetButton3 = document.querySelector(".reset3");
+  resetButton3.addEventListener("click", (e) => {
+    e.preventDefault();
+    pizzaNames.selectedIndex = -1;
+    pizzaRadioBtns.forEach(function (radioButton) {
+      radioButton.checked = false;
+    });
+    pizzaCheckboxes.forEach(function (checkbox) {
+      checkbox.checked = false;
+    });
+  });
 };
