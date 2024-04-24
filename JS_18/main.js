@@ -98,38 +98,13 @@ window.onload = function () {
     countryCapital.innerText = " ";
     countryPopulation.innerText = " ";
 
-    for (let i = 0; i < countries.length; i++) {
-      if (
-        countriesList.value === "Україна" &&
-        countries[i].name === "Україна"
-      ) {
-        countryCapital.innerText = countries[i].capital;
-        countryPopulation.innerText = countries[i].population;
-      } else if (
-        countriesList.value === "Туреччина" &&
-        countries[i].name === "Туреччина"
-      ) {
-        countryCapital.innerText = countries[i].capital;
-        countryPopulation.innerText = countries[i].population;
-      } else if (
-        countriesList.value === "Іспанія" &&
-        countries[i].name === "Іспанія"
-      ) {
-        countryCapital.innerText = countries[i].capital;
-        countryPopulation.innerText = countries[i].population;
-      } else if (
-        countriesList.value === "Португалія" &&
-        countries[i].name === "Португалія"
-      ) {
-        countryCapital.innerText = countries[i].capital;
-        countryPopulation.innerText = countries[i].population;
-      } else if (
-        countriesList.value === "Франція" &&
-        countries[i].name === "Франція"
-      ) {
-        countryCapital.innerText = countries[i].capital;
-        countryPopulation.innerText = countries[i].population;
-      }
+    let selectedCountry = countries.find(
+      (country) => country.name === countriesList.value
+    );
+
+    if (selectedCountry) {
+      countryCapital.innerText = selectedCountry.capital;
+      countryPopulation.innerText = selectedCountry.population;
     }
   });
 
