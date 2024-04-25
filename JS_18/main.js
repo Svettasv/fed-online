@@ -131,23 +131,60 @@ window.onload = function () {
 
   // Додаткове завдання:
 
-  // name
-
   let pizzaNames = document.querySelector("#pizzaName");
-  pizzaNames.selectedIndex = -1;
   let selectedPizza;
 
-  pizzaNames.addEventListener("change", () => {
+  function resetSelections() {
+    pizzaNames.selectedIndex = -1;
+    pizzaRadioBtns.forEach(function (radioButton) {
+      radioButton.checked = false;
+    });
+    pizzaCheckboxes.forEach(function (checkbox) {
+      checkbox.checked = false;
+    });
+  }
+
+  function calculatePrice() {
+    price = 100; // base price
+    for (radiobutton of pizzaRadioBtns) {
+      if (radiobutton.checked) {
+        if (radiobutton.value !== "S" && radiobutton.value === "M") {
+          size = radiobutton.value;
+          price += 50;
+        } else if (radiobutton.value !== "S" && radiobutton.value === "L") {
+          size = radiobutton.value;
+          price += 100;
+        }
+      }
+    }
+    extra = [];
+    for (checkbox of pizzaCheckboxes) {
+      if (checkbox.checked) {
+        extra.push(checkbox.value);
+        price += 20;
+      }
+    }
+    extraResult = extra.join(", ");
+  }
+
+  function handlePizzaChange() {
     let selectedOption = pizzaNames.options[pizzaNames.selectedIndex];
     selectedPizza = selectedOption.value;
-  });
+  }
 
-  // size
+  function handleOrderClick(e) {
+    e.preventDefault();
+    calculatePrice();
+    alert(
+      `Ви замовили піцу: ${selectedPizza}, розмір: ${size}, додатково: ${extraResult}, вартість: ${price} гривень.`
+    );
+  }
+
+  pizzaNames.addEventListener("change", handlePizzaChange);
 
   let pizzaOrder = document.querySelector(".pizzaOrder");
-
   let [...pizzaRadioBtns] = document.querySelectorAll(
-    'input[name = "pizzaSize"]'
+    'input[name="pizzaSize"]'
   );
   pizzaRadioBtns.forEach(function (radioButton) {
     radioButton.checked = false;
@@ -157,64 +194,16 @@ window.onload = function () {
   let extra = [];
   let extraResult = "";
 
-  // extra
-
-  let [...pizzaCheckboxes] = document.querySelectorAll('input[name = "extra"]');
-
+  let [...pizzaCheckboxes] = document.querySelectorAll('input[name="extra"]');
   pizzaCheckboxes.forEach(function (checkbox) {
     checkbox.checked = false;
   });
 
-  pizzaOrder.addEventListener("change", function () {
-    extra = [];
-    price = 100;
-    for (radiobutton of pizzaRadioBtns) {
-      if (
-        radiobutton.checked &&
-        radiobutton.value !== "S" &&
-        radiobutton.value === "M"
-      ) {
-        size = radiobutton.value;
-        price += 50;
-      } else if (
-        radiobutton.checked &&
-        radiobutton.value !== "S" &&
-        radiobutton.value === "L"
-      ) {
-        size = radiobutton.value;
-        price += 100;
-      }
-    }
-    for (checkbox of pizzaCheckboxes) {
-      if (checkbox.checked) {
-        extra.push(checkbox.value);
-        price += 20;
-      }
-    }
-    extraResult = extra.join(", ");
-  });
-
-  // order button
+  pizzaOrder.addEventListener("change", calculatePrice);
 
   let orderBtn = document.querySelector(".order");
-
-  orderBtn.addEventListener("click", function (e) {
-    e.preventDefault();
-
-    alert(
-      `Ви замовили піцу: ${selectedPizza}, розмір: ${size}, додатково: ${extraResult}, вартість: ${price} гривень.`
-    );
-  });
+  orderBtn.addEventListener("click", handleOrderClick);
 
   let resetButton3 = document.querySelector(".reset3");
-  resetButton3.addEventListener("click", (e) => {
-    e.preventDefault();
-    pizzaNames.selectedIndex = -1;
-    pizzaRadioBtns.forEach(function (radioButton) {
-      radioButton.checked = false;
-    });
-    pizzaCheckboxes.forEach(function (checkbox) {
-      checkbox.checked = false;
-    });
-  });
+  resetButton3.addEventListener("click", resetSelections);
 };
