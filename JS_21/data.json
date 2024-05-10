@@ -1,0 +1,8 @@
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "age": 30,
+  "married": false,
+  "children": ["Mary", "Bob"],
+  "car": { "model": "Ford", "year": 2017, "color": "white" }
+}
