@@ -46,7 +46,7 @@ window.onload = function () {
   const getInfoBtn = document.querySelector(".getInfo");
   const infoEl = document.querySelector(".info");
   getInfoBtn.addEventListener("click", function () {
-    fetch("https://swapi.dev/api/planets/3/")
+    fetch("https://swapi.dev/api/planets/1/")
       .then((response) => response.json())
       .then((data) => {
         let divEl = document.createElement("div");
@@ -62,12 +62,19 @@ window.onload = function () {
         <p><strong>Населення:</strong> ${data.population}</p>          
         `;
 
-        let linkEl = document.createElement("a");
-        linkEl.innerHTML = "Фільми";
-        linkEl.setAttribute("href", data.films);
-        linkEl.setAttribute("target", "_blank");
         infoEl.appendChild(divEl);
-        infoEl.appendChild(linkEl);
+
+        let movieList = data.films;
+        console.log(movieList);
+
+        for (let i = 0; i < movieList.length; i++) {
+          let linkEl = document.createElement("a");
+          linkEl.innerHTML = `${i + 1}. Фільм`;
+          linkEl.setAttribute("href", movieList[i]);
+          linkEl.setAttribute("target", "_blank");
+          linkEl.style.display = "block";
+          infoEl.appendChild(linkEl);
+        }
       });
   });
 };
