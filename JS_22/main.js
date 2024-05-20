@@ -28,41 +28,47 @@ new Promise((resolve, reject) => {
 
 let inputString = "jack";
 let stringToUppercase = function (string) {
-  new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     if (string === "") {
       reject("The value is empty, input any string");
     } else if (typeof string !== "string") {
       reject("The value is a number, input any string");
     } else {
-      resolve(string.toUpperCase());
+      setTimeout(() => {
+        resolve(string.toUpperCase());
+      }, 2000);
     }
-  })
-    .then((value) => console.log(value))
-    .catch(function (error) {
-      console.log(`Error: ${error}`);
-    });
+  });
 };
 
-stringToUppercase(inputString);
+stringToUppercase(inputString)
+  .then((value) => console.log(value))
+  .catch(function (error) {
+    console.log(`Error: ${error}`);
+  });
 
 // Завдання 3.
 
 // Напишіть функцію, яка приймає два числа як аргументи і повертає promise. promise має вирішуватися з повідомленням про те, яке з чисел більше, або відхилятися, якщо числа рівні, з повідомленням "Числа рівні".
 
 let checkNumbers = function (num1, num2) {
-  new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     if (num1 === num2) {
       reject("Numbers are equal");
-    } else if (num1 > num2) {
-      resolve(`First number ${num1} is larger than second number ${num2}`);
     } else {
-      resolve(`Second number ${num2} is larger than first number ${num1}`);
+      setTimeout(() => {
+        if (num1 > num2) {
+          resolve(`First number ${num1} is larger than second number ${num2}`);
+        } else {
+          resolve(`Second number ${num2} is larger than first number ${num1}`);
+        }
+      }, 6000);
     }
-  })
-    .then((value) => console.log(value))
-    .catch(function (error) {
-      console.log(`Error: ${error}`);
-    });
+  });
 };
 
-checkNumbers(6, 3);
+checkNumbers(3, 5)
+  .then((value) => console.log(value))
+  .catch(function (error) {
+    console.log(`Error: ${error}`);
+  });
