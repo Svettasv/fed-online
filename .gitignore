@@ -1,0 +1,7 @@
+node_modules/
+*.log
+*.temp
+.vscode
+secret.txt
+config.env
+test/
