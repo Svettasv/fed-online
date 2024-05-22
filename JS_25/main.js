@@ -88,5 +88,5 @@ window.onload = function () {
     document.getElementById("svgContainer2").appendChild(svg);
   }
 
-  addSvgRectangle(300, 100, "yellow", "green", 2);
+  addSvgRectangle(300, 100, "yellow", "blue", 2);
 };
