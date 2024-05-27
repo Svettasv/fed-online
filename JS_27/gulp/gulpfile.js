@@ -1,18 +1,16 @@
 const { src, dest, series, parallel } = require("gulp");
 const concat = require("gulp-concat");
-const gulp = require("gulp");
-const cssmin = require("gulp-cssmin");
+const cleanCSS = require("gulp-clean-css");
 
 function concatstyles() {
-  return src("app/**/*.css").pipe(concat("all.css")).pipe(dest("dist/concat"));
-}
-
-function mincss() {
-  return src("dist/concat/all.css").pipe(cssmin()).pipe(dest("dist/concat"));
+  return src("app/**/*.css")
+    .pipe(concat("all.css"))
+    .pipe(cleanCSS({ compatibility: "ie8" }))
+    .pipe(dest("dist/concat"));
 }
 
 function defaultTask() {
-  return series(concatstyles, mincss, move);
+  return series(concatstyles, move);
 }
 
 function move() {
@@ -24,4 +22,3 @@ function move() {
 exports.default = defaultTask;
 exports.move = move;
 exports.concatstyles = concatstyles;
-exports.mincss = mincss;
